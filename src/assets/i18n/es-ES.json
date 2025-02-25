@@ -1,0 +1,63 @@
+{
+	"actions": {
+		"confirm": "Confirmar",
+		"seeMore": "Ver más",
+		"seeMovies": "Ver películas"
+	},
+	"breadCrumb": {
+		"home": "Inicio",
+		"movies": "Películas"
+	},
+	"sidenav": {
+		"home": "Inicio",
+		"movies": "Películas",
+		"settings": "Configuraciones",
+		"logout": "Salir"
+	},
+	"home": {
+		"listsCards": {
+			"createList": "Crea tu lista de películas",
+			"description": "Guarda tus películas favoritas y mantente al tanto de todos los detalles.",
+			"button": "Ver películas"
+		},
+		"favMovies": "Tus películas favoritas",
+		"noFavMovies": "No hay películas favoritas"
+	},
+	"movies": {
+		"title": "Películas",
+		"searchMovie": "Busca una película...",
+		"listedMovies": "películas listadas",
+		"details": {
+			"movieCard": {
+				"director": "Dirigido por",
+				"released": "Estrenada en"
+			},
+			"cast": {
+				"casting": "Elenco",
+				"modal": "Elenco completo"
+			},
+			"synopsis": "Sinopsis",
+			"userReview": {
+				"rate": "Calificar",
+				"watchedIn": "Visto en",
+				"name": "Nombre",
+				"email": "Correo electrónico",
+				"rating": "Puntuación",
+				"comment": "Comentario",
+				"submit": "Enviar",
+				"errors": {
+					"nameError": "El nombre debe tener al menos 3 letras",
+					"dateError": "La fecha debe ser válida",
+					"emailError": "El correo electrónico debe ser válido",
+					"ratingError": "La puntuación debe ser de 0-10",
+					"commentError": "El comentario debe tener al menos 10 caracteres"
+				}
+			},
+			"reviewCards": {
+				"reviews": "Reseñas",
+				"noReviews" : "Película sin reseñas"
+			}
+		}
+	}
+}
+

@@ -1,0 +1,24 @@
+<div class="d-flex flex-column align-items-center">
+    <div>
+
+        <img class="imgClass" [routerLink]="['/movie', movie.id]" width="100%" [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path">
+
+
+        <div class="d-flex mt-1">
+            <div>
+                <span class="movieTitle">{{movie.title}}<br></span>
+                <span class="movieDate">{{movie.release_date | date: 'longDate': '' : 'pt-BR'}}</span>
+            </div>
+            <div class="flex-grow-1 d-flex justify-content-end align-items-center">
+                <button (click)="favoritar()" class="botaoFavoritar btn">
+    
+                    <ng-container *ngIf="isFavoritado; else naoFavoritado"><img src="assets/img/VectorFav.png"></ng-container>
+
+                    <ng-template #naoFavoritado><img src="assets/img/VectorNaoFav.png"></ng-template>
+
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

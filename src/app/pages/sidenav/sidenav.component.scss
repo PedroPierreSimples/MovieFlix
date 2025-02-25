@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.content {
+    font-family: "Inter", serif;
+}
+
+.imgPerfil {
+    width: 48px;
+    height: 48px;
+}
+
+.nomePerfil {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a:hover {
+    border: 3px solid #1D4ED8;
+}
+
+.activeLink {
+    background-color: #1D4ED8;
+    color: white;
+}
+
+// a {
+//     width: 212px;
+//     height: 42px;
+// }
+
+a{
+    width: 100%;
+}

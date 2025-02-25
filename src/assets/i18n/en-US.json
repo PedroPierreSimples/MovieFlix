@@ -1,0 +1,59 @@
+{
+	"actions": {
+		"confirm": "Confirm",
+		"seeMore": "See more",
+		"seeMovies": "See movies"
+	},
+	"breadCrumb": {
+		"home": "Home",
+		"movies": "Movies"
+	},
+	"sidenav": {
+		"home": "Home",
+		"movies": "Movies",
+		"settings": "Settings",
+		"logout": "Logout"
+	},
+	"home": {
+		"listsCards": {
+			"createList": "Create your movie list",
+			"description": "Save your favorite movies and stay updated with all the details.",
+			"button": "See movies"
+		},
+		"favMovies": "Your favorite movies",
+		"noFavMovies": "There are no favorite movies"
+	},
+	"movies": {
+		"title": "Movies",
+		"searchMovie": "Search a movie...",
+		"listedMovies": "movie listeds",
+		"details": {
+			"movieCard": {
+				"director": "Directed by",
+				"released": "Released in"
+			},
+			"casting": "Casting",
+			"synopsis": "Synopsis",
+			"userReview": {
+				"rate": "Rate",
+				"watchedIn": "Watched in",
+				"name": "Name",
+				"email": "Email",
+				"rating": "Rate",
+				"comment": "Comment",
+				"submit": "Submit",
+				"errors": {
+					"nameError": "Name must be at least 3 characters long",
+					"dateError": "The date must be valid",
+					"emailError": "The email must be a valid email address",
+					"ratingError": "The rating must be between 0 and 10",
+					"commentError": "The comment must be at least 10 characters long"
+				}
+			},
+			"reviewCards": {
+				"reviews": "Reviews",
+				"noReviews": "Film without reviews"
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.content {
+    font-family: 'Work Sans';
+    background-color: #EFEFEF !important;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#imgPrincipal {
+    border-radius: 12px;
+}
+
+.nota {
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #1D4ED8;
+    color: white;
+    border-radius: 6px;
+    width: 121px;
+    height: 67px;
+}
+
+.info {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.genero {
+    width: 109px;
+    height: 52px;
+    color: white;
+    background-color: #1D4ED8;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagem {
+    width: 426px;
+    height: 633px;
+}
+
+.elenco {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.h3Avaliacao {
+    font-weight: 600;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+// .body {
+//     position: relative;
+//     height: 100%;
+//     background: #eee;
+//       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//       font-size: 14px;
+//       color: #000;
+//       margin: 0;
+//       padding: 0;
+//   }

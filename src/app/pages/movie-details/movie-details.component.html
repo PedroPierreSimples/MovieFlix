@@ -1,0 +1,223 @@
+<main class="content py-4 px-5">
+    <section>
+
+        <div class="d-flex mt-2 justify-content-between">
+
+            <div>
+                <app-breadcrum [breadCrumbRoutes]="['/', '/movies', '/movie/:id']"
+                    [breadCrumb]="['Início - ','Filmes - ', movieDetails.title] "></app-breadcrum>
+
+                <h1 class="mt-2">{{movieDetails.title}}</h1>
+            </div>
+
+            <app-language-selector></app-language-selector>
+
+        </div>
+
+    </section>
+
+    <section class="row gap-5">
+        <div class="col-5 ">
+            <div class="card mt-3 rounded-4">
+
+                <div class=" px-4 pt-4">
+                    <img id="imgPrincipal" class="imagem w-100"
+                        [src]="'https://image.tmdb.org/t/p/original/' + movieDetails.poster_path">
+
+                </div>
+                <div class="px-4">
+                    <div class="row mt-4 align-items-center justify-content-between p-0">
+
+                        <div class="col-4 px-1">
+                            <app-badge [class2]="'fontMaior notaStyle'" [starIcon]="true"
+                                [label]="movieDetails.vote_average.toFixed(1)"></app-badge>
+                        </div>
+
+                        <div class="info col-8 align-items-center p-0 m-0 ps-3">
+
+                            <p class="p-0 m-0">{{'movies.details.movieCard.director' | translate}} <strong>@for (item of directors; track $index) {
+                                    {{item.name}}
+                                    }</strong></p>
+
+                            <p class="p-0 m-0">{{'movies.details.movieCard.released' | translate}} {{movieDetails.release_date | date:'longDate': '': 'pt-BR'}}</p>
+
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-4 mb-4">
+
+                        @for (genres of movieDetails.genres; track $index) {
+                        <app-badge class="fontMenor" [label]="genres.name"></app-badge>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+
+            <div class="card rounded-4 mt-4 p-4">
+
+                <div>
+                    <p class="elenco mb-4">{{'movies.details.cast.casting' | translate}}</p>
+                </div>
+
+                @for (cast of movieCreditsDetails.cast | slice: 0: 4; track $index) {
+
+                <app-avatar [imagem]="'https://image.tmdb.org/t/p/original/' + cast.profile_path" [nome]="cast.name"
+                    [papel]="cast.character" [isActor]="true"></app-avatar>
+
+                }
+
+                <div class="text-end">
+
+                    <app-common-button [botaoVerMais]="true" [iconArrow]="true" (click)="openModal()"></app-common-button>
+
+                </div>
+
+            </div>
+            <div class="card mt-4 rounded-4 p-4">
+
+                <div>
+                    <span class="elenco">{{'movies.details.synopsis' | translate}}</span>
+                </div>
+
+                <div class="mt-4 mb-5">
+                    <span>{{movieDetails.overview}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+
+            <div class="row gap-5">
+
+                <div class="col-5 mt-3">
+                    <app-user-review></app-user-review>
+
+                    <div class="card p-4 rounded-4">
+
+                        <h4>{{'movies.details.userReview.rate' | translate}}</h4>
+
+                        <form [formGroup]="meuFormulario" (ngSubmit)="onSubmit()">
+
+                            <div class="d-flex mb-3 gap-3 justify-content-between">
+                                <div class="col-7">
+                                    <label for="nomeInput" class="form-label">{{'movies.details.userReview.name' | translate}}</label>
+                                    <input formControlName="author" type="text" class="form-control" id="nomeInput"
+                                        required="true" placeholder="min: 3">
+                                        <p style="color: red;" *ngIf="meuFormulario.get('author')?.invalid && meuFormulario.get('author')?.touched">{{'movies.details.userReview.errors.nameError' | translate}}</p>
+                                </div>
+                                <div class="col-4">
+                                    <label for="emailInput" class="form-label">{{'movies.details.userReview.watchedIn' | translate}}</label>
+                                    <input formControlName="watchedDate" type="date" class="form-control" id="dateInput"
+                                        required="true" max="d">
+                                    <p style="color: red;" *ngIf="meuFormulario.get('watchedDate')?.invalid && meuFormulario.get('watchedDate')?.touched">{{'movies.details.userReview.errors.dateError' | translate}}</p>
+                                        
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 justify-content-between">
+                                <div class="col-8">
+                                    <label for="emailInput" class="form-label">{{'movies.details.userReview.email' | translate}}</label>
+                                    <input formControlName="email" type="email" class="form-control" id="emailInput"
+                                        placeholder="name@gmail.com" required="true">
+                                        <p style="color: red;" *ngIf="meuFormulario.get('email')?.invalid && meuFormulario.get('email')?.touched">{{'movies.details.userReview.errors.emailError' | translate}}</p>
+                                </div>
+                                <div class="col-3">
+                                    <label for="nota" class="form-label">{{'movies.details.userReview.rating' | translate}}</label>
+                                    <input formControlName="rating" type="number" class="form-control" id="Input"
+                                        required="true" min="0" max="10" placeholder="max: 10">
+                                        <p style="color: red;" *ngIf="meuFormulario.get('rating')?.invalid && meuFormulario.get('rating')?.touched">{{'movies.details.userReview.errors.ratingError' | translate}}</p>
+                                </div>
+
+                            </div>
+                            <div class="d-flex mt-3 gap-4">
+                                <div class="col-12">
+                                    <label for="comentarioInput" class="form-label">{{'movies.details.userReview.comment' | translate}}</label>
+                                    <textarea formControlName="reviewContent" class="form-control" id="comentarioInput"
+                                        rows="2" required="true" placeholder="min: 10"></textarea>
+                                        <p style="color: red;" *ngIf="meuFormulario.get('reviewContent')?.invalid && meuFormulario.get('reviewContent')?.touched">{{'movies.details.userReview.errors.commentError' | translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary col-" type="submit"
+                                    [disabled]="meuFormulario.invalid">{{'movies.details.userReview.submit' | translate}}</button>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-6 mt-3">
+
+                    <h2>{{'movies.details.reviewCards.reviews' | translate}}</h2>
+
+                    <ng-container  *ngIf="reviews.length != 0, else noReview">
+                        <div class="mt-4">
+
+                            <swiper-container class="mySwiper" pagination="true" effect="coverflow" grap-cursor="true"
+                                centered-slides="true" slides-per-view="2" coverflow-effect-rotate="50"
+                                coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+                                coverflow-effect-slide-shadows="true">
+
+                                @for (review of reviews; track $index) {
+                                <swiper-slide class="">
+
+                                    <div class="card p-4 rounded-4">
+
+                                        <div class="d-flex row justify-content-between">
+
+                                            <div class="d-flex gap-3 col-9">
+                                                <img width="20%" src="assets/img/imgPerfilElenco.png">
+                                                
+                                                <h6>{{review.author}}</h6>
+                                            </div>
+                                            <div class="d-flex gap-2 col-3">
+                                                <img width="25" height="25" src="/assets/img/star.icon.png">
+                                                <p><strong>{{review.rating}}</strong></p>
+                                            </div>
+
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex">
+                                                <!-- <p>{{review.rating}}</p> -->
+                                                <p>{{review.reviewContent}}</p>
+                                            </div>
+                                            <p>{{review.reviewDate}}</p>
+                                        </div>
+
+                                    </div>
+                                </swiper-slide>
+                                }
+                            </swiper-container>
+                        </div>
+                    </ng-container>
+                    <ng-template #noReview>
+                        <div class="d-flex justify-content-center">
+                            <h5 class="mt-5"><strong>{{'movies.details.reviewCards.noReviews' | translate}}</strong></h5>
+                        </div>
+                    </ng-template>
+                    <app-review-card></app-review-card>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <app-modal-cast>
+
+        @for (cast of movieCreditsDetails.cast; track $index) {
+        <app-avatar
+            [imagem]="cast.profile_path ?  'https://image.tmdb.org/t/p/original/' + cast.profile_path : 'assets/img/imgPerfilElenco.png'"
+            [nome]="cast.name" [papel]="cast.character" [isActor]="true"></app-avatar>
+        }
+    </app-modal-cast>
+</main>

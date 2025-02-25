@@ -1,0 +1,49 @@
+<!-- <div class="my-2">
+    <button class="botaoVerMais btn">
+        
+        {{label}}
+
+        <ng-container *ngIf="iconArrow">
+            <i  class=" bi bi-arrow-down"></i>
+        </ng-container>
+        <ng-container *ngIf="iconPlus">
+            <i class="bi bi-plus"></i>
+        </ng-container>
+
+    </button>
+
+</div> -->
+<ng-container *ngIf="botaoVerMais">
+    <div class="my-2">
+        <button class="botaoVerMais btn">
+
+            {{'actions.seeMore' | translate}}
+
+            <ng-container *ngIf="iconArrow">
+                <i class=" bi bi-arrow-down"></i>
+            </ng-container>
+            <ng-container *ngIf="iconPlus">
+                <i class="bi bi-plus"></i>
+            </ng-container>
+
+        </button>
+
+    </div>
+</ng-container>
+<ng-container *ngIf="botaoVerFilmes">
+    <div class="my-2">
+        <button id="botaoVerFilmes" class=" btn">
+
+            {{label}}
+
+            <ng-container *ngIf="iconArrow">
+                <i class=" bi bi-arrow-down"></i>
+            </ng-container>
+            <ng-container *ngIf="iconPlus">
+                <i class="bi bi-plus"></i>
+            </ng-container>
+
+        </button>
+
+    </div>
+</ng-container>

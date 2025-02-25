@@ -1,0 +1,9 @@
+<!-- <a routerLink="">Início</a> - <a routerLink="/movies">Filmes</a> - <a routerLink="/movie/id"><strong>Filme</strong></a> -->
+
+@for (item of breadCrumb; track $index) {
+    
+    <a [ngClass]="{'strong': breadCrumb.length-1 == $index}"  routerLink={{breadCrumbRoutes[$index]}}>{{item}}</a>
+    
+}
+
+

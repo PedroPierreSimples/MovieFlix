@@ -1,0 +1,59 @@
+<!-- <div class="card p-4 rounded-4">
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <div class="d-flex align-items-center">
+
+            <img width="10%" src="/img/imgPerfilElenco.png">
+            <p>{{userDetails.author}}</p>
+
+        </div>
+
+        <p>nota...</p>
+
+    </div>
+    <div class="mt-2">
+
+        <p>{{userDetails.reviewContent}}</p>
+
+    </div>
+
+</div> -->
+
+
+<!-- Swiper -->
+<div class="swiper mySwiper">
+
+    <swiper-container class="swiper-wrapper">
+
+        @for (user of users; track $index) {
+            <swiper-slide class="">
+                
+                <div class="card p-4 rounded-4">
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div class="d-flex align-items-center">
+                            <img width="10%" src="assets/img/imgPerfilElenco.png">
+                            <div>
+                                <p>{{user.author}}</p>
+                                
+                                <p>{{user.email}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-2">
+                        <div class="d-flex">
+                            <p>{{user.rating}}</p>
+                            <p>{{user.reviewContent}}</p>
+                        </div>
+                        <p>{{user.reviewDate}}</p>
+                    </div>
+
+                </div>
+            </swiper-slide>
+        }
+        <div class="swiper-pagination"></div>
+    </swiper-container>
+</div>

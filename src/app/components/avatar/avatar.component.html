@@ -1,0 +1,17 @@
+<div class="d-flex gap-4 align-items-center px-2 py-2 ">
+
+
+    <img class="imgPerfil" [ngClass]="{'imgActor': isActor}" src="{{imagem}}">
+
+
+    <div>
+        <div>
+            <span [ngClass]="{'boldStyleActor': isActor}" class="nomePerfil">{{nome}}</span>
+        </div>
+        <ng-container>
+            <div>
+                <span [ngClass]="{'styleActor': isActor}">{{papel}}</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

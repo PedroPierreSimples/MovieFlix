@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.content{
+    font-family: 'Work Sans';
+    background-color: #EFEFEF ;
+}
+
+.divMovieCard:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+#filtro {
+    background-image: url("/assets/img/VectorLupa.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-left: 35px;
+}
+

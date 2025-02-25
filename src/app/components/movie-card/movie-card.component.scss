@@ -1,0 +1,41 @@
+.movieTitle{
+
+    font-weight: 600;
+    font-size: 22px !important;
+
+}
+
+.movieDate{
+
+    font-weight: 400;
+    font-size: 16px !important;
+
+}
+
+.imgClass:hover{
+
+    cursor: pointer;
+    width: 101%;
+
+}
+
+.imgClass{
+    border-radius: 12px;
+}
+
+@media screen and (max-width:2000px) {
+    
+    .movieTitle{
+
+        font-weight: 600;
+        font-size: 24px;
+    
+    }
+    
+    .movieDate{
+
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+}

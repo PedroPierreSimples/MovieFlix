@@ -1,0 +1,36 @@
+<main class="content sticky-top">
+
+    <section class="py-5 ps-3">
+        <div class="row align-items-center">
+            <app-avatar [imagem]="'assets/img/Rectangle 118.png'" [nome]="'Jack Thomeson'"></app-avatar>
+
+        </div>
+    </section>
+
+    <section class="p-4">
+        <div class="row">
+            <div class="col-12 mt-1">
+                <a routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{ exact: true }" class="btn text-start">{{'sidenav.home' | translate}}</a>
+            </div>
+            <div class="col- mt-1">
+                <a routerLink="/movies" [class.activeLink]="isInMovies()" class="btn text-start">{{'sidenav.movies' |translate}}</a>            
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col- mt-1">
+                <a class="btn text-start">{{'sidenav.settings' | translate}}</a>
+            </div>
+            <div class="col- mt-1">
+                <a class="btn text-start">{{'sidenav.logout' | translate}}</a>   
+            </div>
+        </div>
+    </section>
+<!-- 
+    <section>
+        <div class="justify-content-center">
+            <app-language-selector></app-language-selector>
+        </div>
+    </section> -->
+   
+</main>
+

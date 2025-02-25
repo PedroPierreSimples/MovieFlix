@@ -1,0 +1,62 @@
+{
+	"actions": {
+		"confirm": "Confirmar",
+		"seeMore": "Ver mais",
+		"seeMovies": "Ver filmes"
+	},
+	"breadCrumb": {
+		"home": "Início",
+		"movies": "Filmes"
+	},
+	"sidenav": {
+		"home": "Início",
+		"movies": "Filmes",
+		"settings": "Configurações",
+		"logout": "Sair"
+	},
+	"home": {
+		"listsCards": {
+			"createList": "Crie sua lista de filmes",
+			"description": "Salve seus filmes favoritos e fique por dentro de todos os detalhes.",
+			"button": "Ver filmes"
+		},
+		"favMovies": "Seus filmes favoritos",
+		"noFavMovies": "Não há filmes favoritados"
+	},
+	"movies": {
+		"title": "Filmes",
+		"searchMovie": "Busque um filme...",
+		"listedMovies": "filmes listados",
+		"details": {
+			"movieCard": {
+				"director": "Dirigido por",
+				"released": "Lançado em"
+			},
+			"cast": {
+				"casting": "Elenco",
+				"modal": "Elenco completo"
+			},
+			"synopsis": "Sinopse",
+			"userReview": {
+				"rate": "Avalie",
+				"watchedIn": "Assitido em",
+				"name": "Nome",
+				"email": "Email",
+				"rating": "Nota",
+				"comment": "Comentário",
+				"submit": "Enviar",
+				"errors": {
+					"nameError": "Nome deve ter no mínimo 3 letras",
+					"dateError": "A data deve ser válida",
+					"emailError": "O email deve ser um email válido",
+					"ratingError": "A nota deve ser de 0-10",
+					"commentError": "O comentário deve ter no mínimo 10 letras"
+				}
+			},
+			"reviewCards": {
+				"reviews": "Avaliações",
+				"noReviews" : "Filme sem avaliações"
+			}
+		}
+	}
+}

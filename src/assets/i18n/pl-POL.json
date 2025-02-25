@@ -1,0 +1,62 @@
+{
+	"actions": {
+		"confirm": "Potwierdź",
+		"seeMore": "Zobacz więcej",
+		"seeMovies": "Zobacz filmy"
+	},
+	"breadCrumb": {
+		"home": "Strona główna",
+		"movies": "Filmy"
+	},
+	"sidenav": {
+		"home": "Strona główna",
+		"movies": "Filmy",
+		"settings": "Ustawienia",
+		"logout": "Wyloguj się"
+	},
+	"home": {
+		"listsCards": {
+			"createList": "Utwórz swoją listę filmów",
+			"description": "Zapisuj swoje ulubione filmy i bądź na bieżąco ze wszystkimi szczegółami.",
+			"button": "Zobacz filmy"
+		},
+		"favMovies": "Twoje ulubione filmy",
+		"noFavMovies": "Brak ulubionych filmów"
+	},
+	"movies": {
+		"title": "Filmy",
+		"searchMovie": "Szukaj filmu...",
+		"listedMovies": "wymienione filmy",
+		"details": {
+			"movieCard": {
+				"director": "Reżyser",
+				"released": "Wydano w"
+			},
+			"cast": {
+				"casting": "Obsada",
+				"modal": "Pełna obsada"
+			},
+			"synopsis": "Opis",
+			"userReview": {
+				"rate": "Oceń",
+				"watchedIn": "Oglądano w",
+				"name": "Imię",
+				"email": "Email",
+				"rating": "Ocena",
+				"comment": "Komentarz",
+				"submit": "Wyślij",
+				"errors": {
+					"nameError": "Imię musi mieć co najmniej 3 litery",
+					"dateError": "Data musi być prawidłowa",
+					"emailError": "Email musi być prawidłowy",
+					"ratingError": "Ocena musi wynosić od 0 do 10",
+					"commentError": "Komentarz musi mieć co najmniej 10 liter"
+				}
+			},
+			"reviewCards": {
+				"reviews": "Recenzje",
+				"noReviews" : "Brak recenzji filmu"
+			}
+		}
+	}
+}

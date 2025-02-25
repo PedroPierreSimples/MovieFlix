@@ -1,0 +1,193 @@
+{
+  "reviews": [
+    {
+      "id": "3f71",
+      "email": "pppierre05@gmail.com",
+      "author": "Pedro",
+      "reviewContent": "tfghfthdth",
+      "reviewDate": "2025-02-15T03:59:35.775Z",
+      "watchedDate": "2025-02-04",
+      "rating": 10,
+      "movieId": 558449
+    },
+    {
+      "id": "4947",
+      "email": "livia.almeida@gmail.com",
+      "author": "fçhhhhhhhhhh",
+      "reviewContent": "ghghghghghghghgh",
+      "reviewDate": "2025-02-15T04:00:54.405Z",
+      "watchedDate": "2025-02-06",
+      "rating": 4,
+      "movieId": 558449
+    },
+    {
+      "id": "1973",
+      "email": "pppierre05@gmail.com",
+      "author": "Pedro",
+      "reviewContent": "9999999999",
+      "reviewDate": "2025-02-17T12:30:14.844Z",
+      "watchedDate": "2025-02-09",
+      "rating": 6,
+      "movieId": 822119
+    },
+    {
+      "id": "ec56",
+      "email": "pppierre05@gmail.com",
+      "author": "Pedro",
+      "reviewContent": "Muito bom!\n",
+      "reviewDate": "2025-02-17T12:48:26.451Z",
+      "watchedDate": "2025-02-01",
+      "rating": 8,
+      "movieId": 939243
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1241982,
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 4841.214,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 7.221,
+      "vote_count": 1523
+    },
+    {
+      "id": 1241982,
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 4841.214,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 7.221,
+      "vote_count": 1523
+    },
+    {
+      "id": 1241982,
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 4841.214,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 7.221,
+      "vote_count": 1523
+    },
+    {
+      "id": 927342,
+      "adult": false,
+      "backdrop_path": "/xljLe4TiQL1b4sT7956IGgj2vrf.jpg",
+      "genre_ids": [
+        28,
+        18,
+        12,
+        10752
+      ],
+      "original_language": "ta",
+      "original_title": "அமரன்",
+      "overview": "A heroic true story of Major Mukund Varadarajan, an Indian Army officer who displayed extraordinary bravery during a counterterrorism mission in Kashmir’s Shopian district. The film captures his courage in protecting his nation and the devotion of his wife Indhu Rebecaa Varghese.",
+      "popularity": 3478.179,
+      "poster_path": "/6m435uh40N7Gzfbd69ttp6W0sdR.jpg",
+      "release_date": "2024-10-31",
+      "title": "Amaran",
+      "video": false,
+      "vote_average": 7.949,
+      "vote_count": 89
+    },
+    {
+      "id": 927342,
+      "adult": false,
+      "backdrop_path": "/xljLe4TiQL1b4sT7956IGgj2vrf.jpg",
+      "genre_ids": [
+        28,
+        18,
+        12,
+        10752
+      ],
+      "original_language": "ta",
+      "original_title": "அமரன்",
+      "overview": "A heroic true story of Major Mukund Varadarajan, an Indian Army officer who displayed extraordinary bravery during a counterterrorism mission in Kashmir’s Shopian district. The film captures his courage in protecting his nation and the devotion of his wife Indhu Rebecaa Varghese.",
+      "popularity": 3478.179,
+      "poster_path": "/6m435uh40N7Gzfbd69ttp6W0sdR.jpg",
+      "release_date": "2024-10-31",
+      "title": "Amaran",
+      "video": false,
+      "vote_average": 7.949,
+      "vote_count": 89
+    },
+    {
+      "id": 939243,
+      "adult": false,
+      "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
+      "genre_ids": [
+        28,
+        878,
+        35,
+        10751
+      ],
+      "original_language": "en",
+      "original_title": "Sonic the Hedgehog 3",
+      "overview": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.",
+      "popularity": 3435.264,
+      "poster_path": "/d8Ryb8AunYAuycVKDp5HpdWPKgC.jpg",
+      "release_date": "2024-12-19",
+      "title": "Sonic the Hedgehog 3",
+      "video": false,
+      "vote_average": 7.761,
+      "vote_count": 1826
+    },
+    {
+      "id": 1241982,
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 4841.214,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 7.221,
+      "vote_count": 1523
+    }
+  ]
+}
