@@ -43,7 +43,7 @@
   ],
   "favorites": [
     {
-      "id": 1241982,
+      "id": "1241982",
       "adult": false,
       "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
       "genre_ids": [
@@ -64,7 +64,7 @@
       "vote_count": 1523
     },
     {
-      "id": 1241982,
+      "id": "1241982",
       "adult": false,
       "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
       "genre_ids": [
@@ -85,7 +85,7 @@
       "vote_count": 1523
     },
     {
-      "id": 1241982,
+      "id": "1241982",
       "adult": false,
       "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
       "genre_ids": [
@@ -106,7 +106,7 @@
       "vote_count": 1523
     },
     {
-      "id": 927342,
+      "id": "927342",
       "adult": false,
       "backdrop_path": "/xljLe4TiQL1b4sT7956IGgj2vrf.jpg",
       "genre_ids": [
@@ -127,7 +127,7 @@
       "vote_count": 89
     },
     {
-      "id": 927342,
+      "id": "927342",
       "adult": false,
       "backdrop_path": "/xljLe4TiQL1b4sT7956IGgj2vrf.jpg",
       "genre_ids": [
@@ -148,7 +148,7 @@
       "vote_count": 89
     },
     {
-      "id": 939243,
+      "id": "939243",
       "adult": false,
       "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
       "genre_ids": [
@@ -169,7 +169,28 @@
       "vote_count": 1826
     },
     {
-      "id": 1241982,
+      "id": "1241982",
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 4841.214,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "title": "Moana 2",
+      "video": false,
+      "vote_average": 7.221,
+      "vote_count": 1523
+    },
+    {
+      "id": "1241982",
       "adult": false,
       "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
       "genre_ids": [

@@ -1,28 +1,16 @@
-<select [(ngModel)]="language" (change)="switchLanguage(language)">
+<!-- <select [(ngModel)]="language" (change)="switchLanguage(language)">
     <option value="pt-BR">Português<span class="fi fi-br"></span></option>
     <option value="en-US">Inglês<span class="fi fi-us"></span></option>
     <option value="es-ES">Espanhol<span class="fi fi-es"></span></option>
     <option value="pl-POL">Polonês</option>
-</select>
+</select> -->
 
-<!-- <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-  </div> -->
+<div class="p-0">
+  <select class=" form-select" id="floatingSelect" [(ngModel)]="language" (change)="switchLanguage(language)" aria-label="Floating label select example">
+    <option selected value="pt-BR">Português<span class="fi fi-br"></span></option>
+    <option value="en-US">Inglês<span class="fi fi-us"></span></option>
+    <option value="es-ES">Espanhol<span class="fi fi-es"></span></option>
+    <option value="pl-POL">Polonês</option>
+  </select>
+</div>
 
-  <!-- <div class="dropdown" >
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Idioma
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" ((click))="switchLanguage('pt-BR')">Português<span class="fi fi-br"></span></a></li>
-      <li><a class="dropdown-item" ((click))="switchLanguage('en-US')">Inglês<span class="fi fi-us"></span></a></li>
-      <li><a class="dropdown-item" ((click))="switchLanguage('es-ES')">Espanhol<span class="fi fi-es"></span></a></li>
-    </ul>
-  </div> -->
