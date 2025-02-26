@@ -160,7 +160,7 @@
             <ng-container *ngIf="favoriteMovies.length != 0, else noFavorites">
                 <div class="mt-4">
 
-                    <swiper-container class="mySwiper px-3" scrollbar-hide="true" slides-per-view="4">
+                    <swiper-container class="mySwiper px-3" scrollbar-hide="true" slides-per-view="4" >
 
                         @for (movie of upcomingMovies; track $index) {
 
