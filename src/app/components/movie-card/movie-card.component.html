@@ -10,11 +10,9 @@
                 <span class="movieDate">{{movie.release_date | date: 'longDate': '' : 'pt-BR'}}</span>
             </div>
             <div class="flex-grow-1 d-flex justify-content-end align-items-center">
-                <button (click)="favoritar()" class="botaoFavoritar btn">
-    
-                    <ng-container *ngIf="isFavoritado; else naoFavoritado"><img src="assets/img/VectorFav.png"></ng-container>
+                <button (click)="toggleFavorito()" class="botaoFavoritar btn">
 
-                    <ng-template #naoFavoritado><img src="assets/img/VectorNaoFav.png"></ng-template>
+                    <img [src]="isFavoritado ? 'assets/img/VectorFav.png' : 'assets/img/VectorNaoFav.png'">
 
                 </button>
             </div>

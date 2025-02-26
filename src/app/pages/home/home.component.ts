@@ -12,7 +12,7 @@ import { MovieCardComponent } from '../../components/movie-card/movie-card.compo
 
 @Component({
   selector: 'app-home',
-  imports: [BreadcrumComponent, LanguageSelectorComponent, TranslatePipe, CommonModule, CommonButtonComponent, RouterLink, DatePipe, MovieCardComponent],
+  imports: [BreadcrumComponent, LanguageSelectorComponent, TranslatePipe, CommonModule, CommonButtonComponent, MovieCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -29,18 +29,13 @@ export class HomeComponent implements OnInit{
   constructor(private moviesService: MoviesService, private apiService: ApiService, private router: ActivatedRoute){}
 
   ngOnInit() {    
+    this.loadFavoriteMovies()
+  }
+
+  loadFavoriteMovies() {
     let movieId = Number(this.router.snapshot.paramMap.get('id'));
 
-    this.populateMovies(this.language);
-
-    this.moviesService.language$.subscribe((language) => {
-      this.language = language;
-      this.movies = [];
-
-      this.populateMovies(this.language);
-    });
-
-    this.apiService.getFavoritesById(movieId).subscribe({
+    this.apiService.getFavorites().subscribe({
       next: (values) => {
         this.favoriteMovies = [...this.favoriteMovies, ...values]
 
@@ -52,23 +47,5 @@ export class HomeComponent implements OnInit{
 
     })
   }
-
-  populateMovies(language: string){
-    this.moviesService.getPopularMovies(language, this.page).subscribe({
-      next: (res) => {
-        let oldMovies = this.movies;
-
-        this.movies = [...oldMovies,...res.results]
-        
-        // this.movies = [...this.movies,...res.results];
-      },
-      error: (err) => {
-        console.error(err);
-      },
-    })
-  }  
-
-  
-
 
 }
