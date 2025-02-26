@@ -20,7 +20,7 @@ import { MovieCardComponent } from '../../components/movie-card/movie-card.compo
 export class HomeComponent implements OnInit{
 
   public currentLang = 'PT';
-  movies: Movie[] = [];
+  topRatedMovies: Movie[] = [];
   favoriteMovies: Movie[] = [];
   page: number = 1
   language: string = '';
@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit{
   constructor(private moviesService: MoviesService, private apiService: ApiService, private router: ActivatedRoute){}
 
   ngOnInit() {    
-    this.loadFavoriteMovies()
+    this.loadFavoriteMovies();
+    this.populateTopRatedMovies(this.language)
   }
 
   loadFavoriteMovies() {
@@ -46,6 +47,28 @@ export class HomeComponent implements OnInit{
       }
 
     })
+  }
+
+  populateTopRatedMovies(language: string){
+    this.moviesService.getTopRatedMovies(language, this.page).subscribe({
+      next: (res) => {
+        let oldMovies = this.topRatedMovies;
+
+        this.topRatedMovies = [...oldMovies,...res.results]
+        
+        // this.movies = [...this.movies,...res.results];
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    })
+  }
+
+  seeMore() {
+    
+    this.page += 1;
+    this.populateTopRatedMovies(this.language);
+    
   }
 
 }

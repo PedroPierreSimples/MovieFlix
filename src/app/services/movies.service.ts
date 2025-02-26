@@ -55,6 +55,17 @@ export class MoviesService {
         headers: this.defaultHeaders,
       });
     }
+
+    public getTopRatedMovies(language: string, page: number): Observable<MovieList> {
+      let params = new HttpParams();
+      params = params.set('language', language);
+      params = params.set('page', page);
+  
+      return this.http.get<MovieList>(`${this.apiUrl}/top_rated`, {
+        params: params,
+        headers: this.defaultHeaders,
+      });
+    }
   
     public getCreditsByMovieId(language: string, id: number): Observable<Credits> {
       let params = new HttpParams();

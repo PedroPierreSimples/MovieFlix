@@ -21,7 +21,8 @@
 			"button": "Zobacz filmy"
 		},
 		"favMovies": "Twoje ulubione filmy",
-		"noFavMovies": "Brak ulubionych filmów"
+		"noFavMovies": "Brak ulubionych filmów",
+		"topRatedMovies": "Filmes mais avaliados"
 	},
 	"movies": {
 		"title": "Filmy",

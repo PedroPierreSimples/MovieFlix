@@ -85,4 +85,70 @@
 
     </section>
 
+    <section class="mt-5">
+        <div>
+            <h2>{{'home.topRatedMovies' | translate}}</h2>
+        </div>
+        <div class="card rounded-4 mt-4">
+
+            <ng-container *ngIf="favoriteMovies.length != 0, else noFavorites">
+                <div class="mt-4">
+
+                    <swiper-container class="mySwiper px-3" scrollbar-hide="true" slides-per-view="4">
+
+                        @for (movie of topRatedMovies; track $index) {
+
+                            <swiper-slide class="divMovieCard" class="pb-3 p-3">
+                                <app-movie-card [movie]="movie"></app-movie-card>
+                            </swiper-slide>
+               
+                        }
+                        
+                        <!-- <swiper-slide>
+                            <div class="d-flex flex-column align-items-center">
+                                <div>
+                            
+                                    <img class="imgClass" width="100%" src="/assets/img/Film (5).png">
+                            
+                            
+                                    <div class="d-flex mt-1">
+                                        <div>
+                                            <span class="movieTitle">Filme<br></span>
+                                            <span class="movieDate">23455345</span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex justify-content-end align-items-center">
+                                            <button class="botaoFavoritar btn">
+                                
+                                                <ng-container ><img src="assets/img/VectorFav.png"></ng-container>
+                            
+                                                <ng-template #naoFavoritado><img src="assets/img/VectorNaoFav.png"></ng-template>
+                            
+                                            </button>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            </div> 
+                            
+                        </swiper-slide>  -->
+
+                        <swiper-slide>
+                            <div class="flex justify-content-center align-items-center">
+                                <app-common-button [botaoVerMais]="true" [iconPlus]="true" (click)="seeMore()"></app-common-button>
+                            </div>
+                        </swiper-slide>
+
+                    </swiper-container>
+                </div>
+            </ng-container>
+            <ng-template #noFavorites>
+                <div class="d-flex justify-content-center mb-5">
+                    <h5 class="mt-5"><strong>{{'home.noFavMovies' | translate}}</strong></h5>
+                </div>
+            </ng-template>
+
+        </div>
+
+    </section>
+
 </main>
