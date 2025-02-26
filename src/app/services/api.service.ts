@@ -33,8 +33,9 @@ export class ApiService {
     return this.http.post<Movie>(`${this.apiUrl}/favorites`, { ...movie });
   }
 
-  public getFavorites(): Observable<Movie[]> {
+  public getFavorites(language: string): Observable<Movie[]> {
     let params = new HttpParams();
+    params = params.set('language', language);
     return this.http.get<Movie[]>(`${this.apiUrl}/favorites/`);
   }
 

@@ -17,26 +17,36 @@ import { MovieCardComponent } from '../../components/movie-card/movie-card.compo
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   public currentLang = 'PT';
   topRatedMovies: Movie[] = [];
   favoriteMovies: Movie[] = [];
-  page: number = 1
+  upcomingMovies: Movie[] = [];
+  page: number = 1;
   language: string = '';
 
-  
-  constructor(private moviesService: MoviesService, private apiService: ApiService, private router: ActivatedRoute){}
 
-  ngOnInit() {    
-    this.loadFavoriteMovies();
+  constructor(private moviesService: MoviesService, private apiService: ApiService, private router: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.loadFavoriteMovies(this.language);
     this.populateTopRatedMovies(this.language)
+    this.populateUpcomingMovies(this.language)
+
+    this.moviesService.language$.subscribe((language) => {
+      this.language = language;
+
+      this.loadFavoriteMovies(this.language);
+      this.populateTopRatedMovies(this.language)
+    });
+
   }
 
-  loadFavoriteMovies() {
+  loadFavoriteMovies(language: string) {
     let movieId = Number(this.router.snapshot.paramMap.get('id'));
 
-    this.apiService.getFavorites().subscribe({
+    this.apiService.getFavorites(this.language).subscribe({
       next: (values) => {
         this.favoriteMovies = [...this.favoriteMovies, ...values]
 
@@ -49,13 +59,13 @@ export class HomeComponent implements OnInit{
     })
   }
 
-  populateTopRatedMovies(language: string){
+  populateTopRatedMovies(language: string) {
     this.moviesService.getTopRatedMovies(language, this.page).subscribe({
       next: (res) => {
         let oldMovies = this.topRatedMovies;
 
-        this.topRatedMovies = [...oldMovies,...res.results]
-        
+        this.topRatedMovies = [...oldMovies, ...res.results]
+
         // this.movies = [...this.movies,...res.results];
       },
       error: (err) => {
@@ -64,11 +74,24 @@ export class HomeComponent implements OnInit{
     })
   }
 
+  populateUpcomingMovies(language: string) {
+    this.moviesService.getUpcomingMovies(language, this.page).subscribe({
+      next: (res) => {
+        let oldMovies = this.upcomingMovies;
+
+        this.upcomingMovies = [...oldMovies, ...res.results]
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    })
+  }
+
   seeMore() {
-    
+
     this.page += 1;
     this.populateTopRatedMovies(this.language);
-    
+
   }
 
 }
