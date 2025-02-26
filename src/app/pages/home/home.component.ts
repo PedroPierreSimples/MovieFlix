@@ -12,7 +12,7 @@ import { MovieCardComponent } from '../../components/movie-card/movie-card.compo
 
 @Component({
   selector: 'app-home',
-  imports: [BreadcrumComponent, LanguageSelectorComponent, TranslatePipe, CommonModule, CommonButtonComponent, RouterLink, DatePipe, MovieCardComponent],
+  imports: [BreadcrumComponent, LanguageSelectorComponent, TranslatePipe, CommonModule, CommonButtonComponent, MovieCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
