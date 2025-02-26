@@ -37,8 +37,8 @@ export class HomeComponent implements OnInit {
     this.moviesService.language$.subscribe((language) => {
       this.language = language;
 
-      this.loadFavoriteMovies(this.language);
-      this.populateTopRatedMovies(this.language)
+      // this.loadFavoriteMovies(this.language);
+      // this.populateTopRatedMovies(this.language)
     });
 
   }
@@ -87,10 +87,17 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  seeMore() {
+  seeMoreTopRated() {
 
     this.page += 1;
     this.populateTopRatedMovies(this.language);
+
+  }
+
+  seeMoreUpcoming() {
+
+    this.page += 1;
+    this.populateUpcomingMovies(this.language);
 
   }
 
