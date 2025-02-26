@@ -21,7 +21,11 @@
 			"button": "See movies"
 		},
 		"favMovies": "Your favorite movies",
-		"noFavMovies": "There are no favorite movies"
+		"noFavMovies": "There are no favorite movies",
+		"topRatedMovies": "Top rated movies",
+		"noTopRatedMovies": "there are no top rated movies",
+		"upcomingMovies": "Upcoming movies",
+		"noUpcomingMovies": "There are no upcoming movies"
 	},
 	"movies": {
 		"title": "Movies",

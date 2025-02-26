@@ -21,7 +21,11 @@
 			"button": "Ver filmes"
 		},
 		"favMovies": "Seus filmes favoritos",
-		"noFavMovies": "Não há filmes favoritados"
+		"noFavMovies": "Não há filmes favoritados",
+		"topRatedMovies": "Filmes mais bem avaliados",
+		"noTopRatedMovies": "Não há filmes mais bem avaliados",
+		"upcomingMovies": "Filmes que estão por vir",
+		"noUpcomingMovies": "Não há filmes que estão por vir"
 	},
 	"movies": {
 		"title": "Filmes",
